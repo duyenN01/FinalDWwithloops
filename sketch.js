@@ -25,7 +25,7 @@ function draw() {
     // line(mouseX, mouseY, pmouseX, pmouseY);
     array.push([mouseX, mouseY]);
     beginShape();
-        //for (let i = 0; i < array.length; i++){
+        for (let i = 0; i < array.length; i++){
           //line(array[i][0],array[i][1],array[i+1][0],array[i+1][1]);
           curveVertex(array[i][0],array[i][1]);
       }
@@ -42,6 +42,12 @@ function keyTyped(){
   //background(255);
 //display image
 //clear();
+beginShape();
+    for (let i = 0; i < array.length; i++){
+      //line(array[i][0],array[i][1],array[i+1][0],array[i+1][1]);
+      curveVertex(array[i][0],array[i][1]);
+  }
+  endShape();
 
 }
   return false;
